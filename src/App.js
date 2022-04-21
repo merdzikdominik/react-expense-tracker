@@ -32,7 +32,7 @@ function App() {
     <div>
       <h2>Let's get started!</h2>
 
-      <Expenses expensesAttribute={expenses}/>
+      <Expenses items={expenses}/>
 
     </div>
   );
