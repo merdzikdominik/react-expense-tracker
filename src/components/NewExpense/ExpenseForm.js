@@ -9,24 +9,15 @@ const ExpenseForm = (props) => {
 
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value);
-        // console.log("Title: " + enteredTitle);
     }
 
     const amountChangeHandler = (event) => {
         setEnteredAmount(event.target.value);
-        // console.log("Amount: " + enteredAmount);
     }
 
     const dateChangeHandler = (event) => {
         setEnteredDate(event.target.value);
-        // console.log("Date: " + enteredDate);
     }
-
-    // const titleChangeHandler = (event) => {
-    //     setUserInput((prevState) => {
-    //         return {...prevState, enteredTitle: event.target.value};
-    //     });
-    // }
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -42,7 +33,6 @@ const ExpenseForm = (props) => {
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
-        // console.log(expenseData);
     }
 
     return (
