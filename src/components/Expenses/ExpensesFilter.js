@@ -2,14 +2,9 @@ import React from 'react';
 import './ExpensesFilter.css';
 
 const ExpensesFilter = (props) => {
-    // props.getDropdownValueFromFilter(getDropdownValue);
-
     const dropdownChangeHandler = (event) => {
         props.onChangeFilter(event.target.value);
     }
-
-    // props.getDropdownValueToFilter(year);
-
 
   return (
     <div className='expenses-filter'>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ExpenseItem from './ExpenseItem';
+import ExpensesList from './ExpensesList';
 import Card from '../UI/Card';
 import ExpensesFilter from './ExpensesFilter';
 
@@ -18,19 +18,22 @@ const Expenses = (props) => {
 
     const filteredArray = props.items.filter(filterArrayToReceiveSelectedYear);
 
+    // let expenseContent = <p>No expenses found</p>;
+
+    // if(filteredArray.length > 0) {
+    //     expenseContent = filteredArray.map(expense => 
+    //         <ExpenseItem
+    //             key={expense.id} 
+    //             title={expense.title} 
+    //             amount={expense.amount} 
+    //             date={expense.date}
+    //         />)
+    // };
+
     return (
         <Card className="expenses">
             <ExpensesFilter selectedValue={year} onChangeFilter={getDropdownValue}/>
-            {filteredArray.length === 0 
-                ? (<p>No products</p>) 
-                : (filteredArray.map(expense => 
-                    <ExpenseItem
-                        key={expense.id} 
-                        title={expense.title} 
-                        amount={expense.amount} 
-                        date={expense.date}
-                    />))
-            }
+            <ExpensesList items={filteredArray} />
         </Card>
     );
 };
