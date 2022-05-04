@@ -7,7 +7,7 @@ const INITIAL_EXPENSES = [
     id: 'e1',
     title: 'Toilet Paper',
     amount: 94.12,
-    date: new Date(2019, 7, 14),
+    date: new Date(2019, 3, 14),
   },
   { id: 'e2', 
     title: 'New TVs', 
@@ -27,6 +27,8 @@ const INITIAL_EXPENSES = [
     date: new Date(2022, 5, 12),
   },
 ];
+
+// console.log(INITIAL_EXPENSES.date.getMonth());
 
 const App = () => {
   const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
